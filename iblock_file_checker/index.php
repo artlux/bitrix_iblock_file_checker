@@ -69,7 +69,7 @@ echo Loc::getMessage('FL_CHECKER_MESS6').round(($finSize/1024)/1024).'MB<br>';
 $urlDelete = $APPLICATION->GetCurPage(false).'?action=delete_not_exists'.'&enigue='.time();
 $fileOb = new \Bitrix\Main\IO\File(__DIR__.'/all_correct_files.txt');
 ?>
-<?if($fileSave->isExists()){?>
+<?if($fileOb->isExists()){?>
 <br> <a href="<?=$urlDelete?>"><?=Loc::getMessage('FL_CHECKER_MESS1')?></a><br><br>
 <?}else{?>
 <br><?=Loc::getMessage('FL_CHECKER_MESS7')?><br><br>
